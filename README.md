@@ -32,3 +32,16 @@ dependencies {
 
 </android.support.v7.widget.CardView>
 ```
+- For changing size you can use:
+```java
+void setRoundedImageViewSize(int size) {
+        CardView cardViewForImage = findViewById(R.id.card_view_for_image);
+        
+        cardViewForImage.setRadius(size / 2);
+
+        ViewGroup.LayoutParams params = cardViewForImage.getLayoutParams();
+        params.width = size;
+        params.height = size;
+        cardViewForImage.setLayoutParams(params);
+}
+```
